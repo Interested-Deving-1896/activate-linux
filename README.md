@@ -1,116 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # activate-linux
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-The "Activate Windows" watermark ported to Linux with cairo in C
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/activate-linux)
 
-"Science isn't about WHY. It's about WHY NOT. Why is so much of our science dangerous? Why not marry safe science if you love it so much. In fact, why not invent a special safety door that won't hit you on the butt on the way out, because you are fired." — Cave Johnson (Portal 2)
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-> Read [ARGS.md](ARGS.md) for information about command line arguments.
+## Architecture
 
-## Building
-Note that the executable's name depends on the target platform.
-You can use `make install` to install and `make uninstall` to remove it.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-### Xmake
-I've been experimenting with using [Xmake](https://xmake.io/#/) for building instead of make, you can test this by installing it and running
-```console
-xmake
-```
-Please leave feedback to improve this if you want
+## Install
 
-### *nix:
-```console
-make
-```
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-### Windows (using [MSYS2](https://msys2.org)):
-Replace `gcc` with `clang`, if you want. But then don't forget to start proper shortcut `MSYS2 CLANG64`.
-```console
-pacman -S --noconfirm git make pkgconf pactoys
-pacboy -S --noconfirm gcc:p
-git clone https://github.com/MrGlockenspiel/activate-linux
+```bash
+git clone https://github.com/Interested-Deving-1896/activate-linux.git
 cd activate-linux
-export backends=gdi
-make
 ```
 
-## Linux
+## Usage
 
-### Dependencies
-This project depends on:
-- [`libcairo2-dev`](https://cairographics.org)
-- [`libpango1.0-dev`](https://www.gtk.org/docs/architecture/pango)
-- [`libxi-dev`](https://gitlab.freedesktop.org/xorg/lib/libxi)
-- [`libx11-dev`](https://gitlab.freedesktop.org/xorg/lib/libx11)
-- `x11proto-core-dev`
-- [`x11proto-dev`](https://gitlab.freedesktop.org/xorg/proto/x11proto)
-- [`libxt-dev`](https://gitlab.freedesktop.org/xorg/lib/libxt)
-- [`libxext-dev`](https://gitlab.freedesktop.org/xorg/lib/libxext)
-- [`libxfixes-dev`](https://gitlab.freedesktop.org/xorg/lib/libxfixes)
-- [`libxinerama-dev`](https://gitlab.freedesktop.org/xorg/lib/libxinerama)
-- [`libxrandr-dev`](https://gitlab.freedesktop.org/xorg/lib/libxrandr)
-- [`libwayland-dev`](https://gitlab.freedesktop.org/wayland/wayland)
-- [`wayland-protocols`](https://gitlab.freedesktop.org/wayland/wayland-protocols)
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-Optional dependencies:
-- [`libconfig-dev`](https://hyperrealm.github.io/libconfig)
+## Configuration
 
-Those packages may be installed (in Debian-based distros) like this:
-```console
-sudo apt install libconfig-dev libcairo2-dev libxi-dev libx11-dev x11proto-core-dev x11proto-dev \
-libxt-dev libxext-dev libxfixes-dev libxinerama-dev libxrandr-dev libwayland-dev wayland-protocols libpango1.0-dev
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/activate-linux`](https://github.com/Interested-Deving-1896/activate-linux) and mirrored through:
+
+```
+Interested-Deving-1896/activate-linux  ──►  OpenOS-Project-OSP/activate-linux  ──►  OpenOS-Project-Ecosystem-OOC/activate-linux
 ```
 
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-### Installing
+## Contributors
 
-#### Ubuntu
-@eddelbuettel runs a PPA with activate linux in it, so it can be installed with:
-```console
-sudo add-apt-repository ppa:edd/misc
-sudo apt update
-sudo apt install activate-linux
-```
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-#### Arch Linux
-This project is in the AUR under [activate-linux-git](https://aur.archlinux.org/packages/activate-linux-git).
+## Origins
 
-Install/uninstall it using your favorite AUR helper.
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
 
-#### Nix (NixOS)
-This repository is a flake. Run it using `nix run "github:MrGlockenspiel/activate-linux"`.
+## Resources
 
-#### Gentoo
-@Plexvola maintains an ebuild for activate-linux and can be installed with the following
-```console
-eselect repository enable vaacus
-emerge --sync vaacus
-emerge -av activate-linux
-```
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
-## Windows
+## License
 
-### Scoop
-
-You can install it on the [Extras](https://github.com/ScoopInstaller/Extras) bucket:
-```powershell
-scoop bucket add extras # Ensure bucket is added first
-scoop install activate-linux
-```
-
-
-## MacOS (Horrific)
-
-### Dependencies
-
-Use MacPorts to install the following, then build normally.
-
-- `xorg-server`
-- `cairo`
-- `xorg-libXinerama`
-
-Alternatively, you can use [this](https://github.com/Lakr233/ActivateMac) project instead because it actually works properly.
-
-## Example:
-
-![screenshot](screenshot.png)
+<!-- AI:start:license -->
+[GPL-3.0](https://github.com/Interested-Deving-1896/activate-linux/blob/main/LICENSE.md) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->

@@ -29,6 +29,12 @@ Color is formatted in "r-g-b-a", with each number being a decimal from 0 to 1. D
 ./activate-linux --text-preset "bsd"
 ```
 
+### Use Distro name
+```console
+./activate-linux -o
+./activate-linux --os-release
+```
+
 ## Appearance
 
 ### Custom Font
@@ -86,6 +92,19 @@ Note that message always appears in the top left corner of the overlay.
 ```console
 ./activate-linux -w
 ./activate-linux --bypass-compositor
+```
+
+### Run via SystemD
+```
+sudo cp activate-linux /usr/bin/.
+sudo cp activate-linux.service /etc/systemd/user/.
+sudo systemctl --user --now enable activate-linux.service
+```
+
+Add optional arguments to `~/.config/activate-linux.env` like this:
+
+```
+ARGS=-t "Main Text" --gamescope --text-font "Segoe UI"
 ```
 
 ### Run as daemon
